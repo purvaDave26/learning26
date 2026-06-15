@@ -1,0 +1,43 @@
+The Virtual DOM (VDOM) is a lightweight copy of the real DOM kept in memory by React.
+React uses it to improve performance and update the UI efficiently.
+Reconciliation Flow
+State/Props Change
+        ↓
+New Virtual DOM Created
+        ↓
+Old VDOM vs New VDOM Compared
+        ↓
+Find Differences
+        ↓
+Update Only Changed Parts in Real DOM
+
+1. Create new VDOM
+2. Compare with old VDOM
+3. Find changed nodes
+4. Update real DOM
+
+What is Reconciliation in React?
+
+Reconciliation is the process through which React compares the old Virtual DOM with the new Virtual DOM and updates only the changed parts in the real DOM efficiently.
+
+Rendering Flow in React
+Component Function Executes
+            ↓
+JSX Returned
+            ↓
+Virtual DOM Created
+            ↓
+Diffing/Reconciliation
+            ↓
+Real DOM Updated
+            ↓
+Browser Paints UI
+
+Rendering and Virtual DOM   
+Render Component
+      ↓
+Create Virtual DOM
+      ↓
+Compare with Previous VDOM
+      ↓
+Update Real DOM
