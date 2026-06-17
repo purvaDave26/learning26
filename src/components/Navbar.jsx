@@ -99,7 +99,7 @@ export const Navbar = () => {
                 Drop down
               </Link>
             </li>
-            */}
+            
             <li class="nav-item active">
               <Link class="nav-link" to="/inputdemo2">
                input demo2
@@ -114,7 +114,9 @@ export const Navbar = () => {
               <Link class="nav-link" to="/table1">
               table 1
               </Link>
+              
             </li>
+            */}
              <li class="nav-item active">
               <Link class="nav-link" to="/table2">
               table 2
@@ -199,6 +201,19 @@ export const Navbar = () => {
              <li>
                <NavLink to="/searchomdb" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
                 ({color: isActive ? "blue" : "black"})}> search moive</NavLink>
+            </li>
+
+            <li>
+               <NavLink to="/apidemo2" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
+                ({color: isActive ? "blue" : "black"})}> Api demo 2</NavLink>
+            </li>
+             <li>
+               <NavLink to="/apidemo22" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
+                ({color: isActive ? "blue" : "black"})}> Api demo 22</NavLink>
+            </li>
+            <li>
+               <NavLink to="/useeffectdemo1" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
+                ({color: isActive ? "blue" : "black"})}>use effect demo</NavLink>
             </li>
     </ul>
   </div>

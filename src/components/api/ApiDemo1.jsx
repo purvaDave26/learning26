@@ -1,9 +1,13 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const ApiDemo1 = () => {
     const [message, setmessage] = useState("");
     const [users, setusers] = useState([]);
+
+    useEffect(()=>{
+        getUsers()
+    },[])
     const getUsers=async()=>
     {
         const res=await axios.get("https://node5.onrender.com/user/user/")
@@ -43,7 +47,7 @@ export const ApiDemo1 = () => {
                }
             </tbody>
         </table>
-        <button onClick={getUsers}>GET</button>
+        {/* <button onClick={getUsers}>GET</button> */}
         {
             users.map((u)=>
             {

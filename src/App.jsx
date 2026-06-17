@@ -52,6 +52,9 @@ import { FindBombGame } from './components/FindBombGame';
 import { ApiDemo1 } from './components/api/ApiDemo1';
 import { OmdbSearch } from './components/api/OmdbSearch';
 import { MovieDetails } from './components/api/MovieDetails';
+import { ApiDemo2 } from './components/api/ApiDemo2';
+import { ApiDemo22 } from './components/api/ApiDemo22';
+import { UseEffectDemo1 } from './components/UseEffectDemo1';
 //import './App.css'
 
 function App() {
@@ -133,8 +136,11 @@ function App() {
         <Route path='/usememodemo1' element={<UseMemodemo1/>}></Route>
         <Route path='/findbombgame' element={<FindBombGame/>}></Route>
         <Route path='/apidemo1' element={<ApiDemo1/>}></Route>
+        <Route path='/apidemo2' element={<ApiDemo2/>}></Route>
+         <Route path='/apidemo22' element={<ApiDemo22/>}></Route>
         <Route path='/searchomdb' element={<OmdbSearch/>}></Route>
         <Route path='/moviedeatils/:imdbID' element={<MovieDetails/>}></Route>
+        <Route path='/useeffectdemo1' element={<UseEffectDemo1/>}></Route>
       </Routes>
     </div>
   )
