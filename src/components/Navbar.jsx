@@ -215,6 +215,11 @@ export const Navbar = () => {
                <NavLink to="/useeffectdemo1" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
                 ({color: isActive ? "blue" : "black"})}>use effect demo</NavLink>
             </li>
+
+            <li>
+               <NavLink to="/product" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
+                ({color: isActive ? "blue" : "black"})}>product</NavLink>
+            </li>
     </ul>
   </div>
 </nav>

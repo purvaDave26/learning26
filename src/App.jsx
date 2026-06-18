@@ -55,6 +55,8 @@ import { MovieDetails } from './components/api/MovieDetails';
 import { ApiDemo2 } from './components/api/ApiDemo2';
 import { ApiDemo22 } from './components/api/ApiDemo22';
 import { UseEffectDemo1 } from './components/UseEffectDemo1';
+import { Bounce, ToastContainer } from 'react-toastify';
+import { Product } from './components/Product';
 //import './App.css'
 
 function App() {
@@ -94,6 +96,19 @@ function App() {
       {/* <MapDemo5></MapDemo5> */}
       {/* <MapDemo6></MapDemo6> */}
 
+      <ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+transition={Bounce}
+/>
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<MapDemo4/>}></Route>
@@ -141,6 +156,7 @@ function App() {
         <Route path='/searchomdb' element={<OmdbSearch/>}></Route>
         <Route path='/moviedeatils/:imdbID' element={<MovieDetails/>}></Route>
         <Route path='/useeffectdemo1' element={<UseEffectDemo1/>}></Route>
+        <Route path='/product' element={<Product/>}></Route>
       </Routes>
     </div>
   )
