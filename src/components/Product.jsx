@@ -7,7 +7,6 @@ export const Product = () => {
 
     const {register,handleSubmit}=useForm();
 
-
     const submitHandler=async(data)=>
     {
         console.log(data)
