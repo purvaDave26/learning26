@@ -14,7 +14,7 @@ export const ApiDemo2 = () => {
         const res= await axios.post("https://node5.onrender.com/user/user/",userObj);
         console.log(res);
         console.log(res.data)
-    }
+    }  
   return (
     <div style={{textAlign:"center"}}>
         <h1>ApiDemo2</h1>
