@@ -1,7 +1,15 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 export const Navbar = () => {
+  const navigate=useNavigate();
+  const logoutHandlar=()=>
+  {
+
+    localStorage.clear();
+    alert("logout");
+    navigate("/login");
+  }
   return (
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-lighth">
@@ -116,7 +124,7 @@ export const Navbar = () => {
               </Link>
               
             </li>
-            */}
+     
              <li class="nav-item active">
               <Link class="nav-link" to="/table2">
               table 2
@@ -134,7 +142,7 @@ export const Navbar = () => {
               Form Demo1
               </Link>
             </li>
-
+       
              <li class="nav-item active">
               <Link class="nav-link" to="/formdemo2">
               Form Demo2
@@ -152,7 +160,7 @@ export const Navbar = () => {
               Form Demo4
               </Link>
             </li>
-            
+              */}
              <li class="nav-item active">
               <Link class="nav-link" to="/practiceform">
               practice form
@@ -219,6 +227,15 @@ export const Navbar = () => {
             <li>
                <NavLink to="/product" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
                 ({color: isActive ? "blue" : "black"})}>product</NavLink>
+            </li>
+
+             <li>
+               <NavLink to="/login" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
+                ({color: isActive ? "blue" : "black"})}>Login</NavLink>
+            </li>
+
+             <li class="nav-item active">
+              <button onClick={logoutHandlar}>logout</button>
             </li>
     </ul>
   </div>

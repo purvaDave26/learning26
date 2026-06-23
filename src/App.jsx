@@ -57,6 +57,7 @@ import { ApiDemo22 } from './components/api/ApiDemo22';
 import { UseEffectDemo1 } from './components/UseEffectDemo1';
 import { Bounce, ToastContainer } from 'react-toastify';
 import { Product } from './components/Product';
+import { Login } from './components/api/Login';
 //import './App.css'
 
 function App() {
@@ -157,6 +158,7 @@ transition={Bounce}
         <Route path='/moviedeatils/:imdbID' element={<MovieDetails/>}></Route>
         <Route path='/useeffectdemo1' element={<UseEffectDemo1/>}></Route>
         <Route path='/product' element={<Product/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
       </Routes>
     </div>
   )
