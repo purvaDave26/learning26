@@ -8,7 +8,9 @@ export const Navbar = () => {
 
     localStorage.clear();
     alert("logout");
+    document.cookie = "token=; max-age=0; path=/;";
     navigate("/login");
+
   }
   return (
     <div>
@@ -237,6 +239,12 @@ export const Navbar = () => {
              <li class="nav-item active">
               <button onClick={logoutHandlar}>logout</button>
             </li>
+
+             <li>
+               <NavLink to="/item" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
+                ({color: isActive ? "blue" : "black"})}>Item</NavLink>
+            </li>
+            
     </ul>
   </div>
 </nav>
