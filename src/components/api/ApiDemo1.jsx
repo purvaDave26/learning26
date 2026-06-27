@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Loader } from '../Loader';
 import { toast } from 'react-toastify';
 import { Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export const ApiDemo1 = () => {
     const [message, setmessage] = useState("");
@@ -87,6 +88,7 @@ export const ApiDemo1 = () => {
                         <td>
                             <button className="btn btn-danger" onClick={()=>{deleteUser(u._id)}}>Delete</button>
                             <button className="btn btn-primary" onClick={()=>getUserDetails(u._id)}>Details</button>
+                            <Link to={`/updateuser/${u._id}`} className='btn btn-warning'>update</Link>
                         </td>
                     </tr>
                 ))

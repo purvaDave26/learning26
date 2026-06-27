@@ -13,7 +13,7 @@ export const Login = () => {
 
         localStorage.setItem("tokan",res.data.data);
 
-       document.cookie = `token=${res.data.data}`;
+       document.cookie = `token=${res.data.data};path=/`;
        console.log(document.cookie);
 
 

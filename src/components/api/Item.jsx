@@ -11,8 +11,15 @@ export const Item = () => {
     {
      const res=await axios.get(`https://node5.onrender.com/item`,{
       headers:{
-        "Authorization":`Bearer ${localStorage.getItem("tokan")}`
+       // "Authorization":`Bearer ${localStorage.getItem("tokan")}`
+          "Authorization": `Bearer ${
+        document.cookie.split("; ").find(row => row.startsWith("token="))?.split("=")[1]}`,
     }
+    
+      
+    
+    
+
 })
     setusers(res.data.data);  
     }
