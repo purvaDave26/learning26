@@ -244,6 +244,11 @@ export const Navbar = () => {
                <NavLink to="/item" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
                 ({color: isActive ? "blue" : "black"})}>Item</NavLink>
             </li>
+
+             <li>
+               <NavLink to="/addproducts" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
+                ({color: isActive ? "blue" : "black"})}>Add product</NavLink>
+            </li>
             
     </ul>
   </div>

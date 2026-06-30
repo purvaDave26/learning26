@@ -60,6 +60,7 @@ import { Product } from './components/Product';
 import { Login } from './components/api/Login';
 import { Item } from './components/api/Item';
 import { Updateuser } from './components/api/Updateuser';
+import { AddProducts } from './components/api/AddProducts';
 //import './App.css'
 
 function App() {
@@ -163,6 +164,7 @@ transition={Bounce}
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/item' element={<Item/>}></Route>
         <Route path='/updateuser/:id' element={<Updateuser/>}></Route>
+        <Route path='/addproducts' element={<AddProducts/>}></Route>
       </Routes>
     </div>
   )
