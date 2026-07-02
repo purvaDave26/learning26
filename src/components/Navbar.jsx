@@ -162,7 +162,7 @@ export const Navbar = () => {
               Form Demo4
               </Link>
             </li>
-              */}
+          
              <li class="nav-item active">
               <Link class="nav-link" to="/practiceform">
               practice form
@@ -177,7 +177,7 @@ export const Navbar = () => {
                <NavLink to="/formdemo6" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
                 ({color: isActive ? "blue" : "black"})}> Form Demo6</NavLink>
             </li>
-            {/* <li class="nav-item active">
+             <li class="nav-item active">
               <Link class="nav-link" to="/formdemo7">
               Form Demo7
               </Link>
@@ -248,6 +248,21 @@ export const Navbar = () => {
              <li>
                <NavLink to="/addproducts" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
                 ({color: isActive ? "blue" : "black"})}>Add product</NavLink>
+            </li>
+
+            <li>
+               <NavLink to="/useref1" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
+                ({color: isActive ? "blue" : "black"})}>use ref 1</NavLink>
+            </li>
+
+            <li>
+               <NavLink to="/useref2" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
+                ({color: isActive ? "blue" : "black"})}>use ref 2</NavLink>
+            </li>
+
+            <li>
+               <NavLink to="/useref3" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
+                ({color: isActive ? "blue" : "black"})}>use ref 3</NavLink>
             </li>
             
     </ul>

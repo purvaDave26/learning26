@@ -9,7 +9,8 @@ export const AddProducts = () => {
     const submitHandler=async(data)=>
     {
         console.log(data)
-        const res=await axios.post(`https://node5.onrender.com/product/addproducts`,data);
+        const res=await axios.post(`https://node5.onrender.com/product/addproducts`,data.products);
+        console.log(res.data)
 
     }
   return (
@@ -30,7 +31,7 @@ export const AddProducts = () => {
             </div>
             <div>
                 <label>description</label>
-                <input type='text' {...register(`products.${index}.descriptio`)}></input>
+                <input type='text' {...register(`products.${index}.description`)}></input>
             </div>
             <div>
                 <label>Color:</label>
@@ -52,12 +53,13 @@ export const AddProducts = () => {
                 <label>Unit</label>
                 <input type='text' {...register(`products.${index}.unit`)}></input>
             </div>
-            <div>
-                <input type='submit'></input>
-            </div>
+            <button onClick={() => remove(index)}>Remove</button>
         </div>
                 })
             }
+             <div>
+                <input type='submit'></input>
+            </div>
         </form>
           <button onClick={()=>{append([{name:"",price:0,description:"",color:[],size:"",isAvailable:true,unit:0}])}}>append</button>
     </div>

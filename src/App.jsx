@@ -61,6 +61,9 @@ import { Login } from './components/api/Login';
 import { Item } from './components/api/Item';
 import { Updateuser } from './components/api/Updateuser';
 import { AddProducts } from './components/api/AddProducts';
+import { UseRefDemo1 } from './components/UseRefDemo1';
+import { UseRefDemo2 } from './components/UseRefDemo2';
+import { UseRefDemo3 } from './components/UseRefDemo3';
 //import './App.css'
 
 function App() {
@@ -165,6 +168,9 @@ transition={Bounce}
         <Route path='/item' element={<Item/>}></Route>
         <Route path='/updateuser/:id' element={<Updateuser/>}></Route>
         <Route path='/addproducts' element={<AddProducts/>}></Route>
+        <Route path='/useref1' element={<UseRefDemo1/>}></Route>
+        <Route path='/useref2' element={<UseRefDemo2/>}></Route>
+        <Route path='/useref3' element={<UseRefDemo3  />}></Route>
       </Routes>
     </div>
   )
