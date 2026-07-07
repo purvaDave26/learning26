@@ -9,8 +9,18 @@ export const UseRefDemo3 = () => {
     },[message]);
     const addmsg=()=>
     {
+         const alph="abcdefghijklmnopqrstuvwxyz"
+        let size=5;
+        var name="";
+        for(let i=0;i<size;i++)
+        {
+            var randomIndex=Math.floor(Math.random()*alph.length)
+            // console.log(randomIndex)
+            // console.log(alph[randomIndex])
+            name=name+alph[randomIndex]
+        }
         const msg="new msg";
-        setmessage([...message,msg])
+        setmessage([...message,name])
     }
   return (
     <div style={{textAlign:"center"}}>

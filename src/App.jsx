@@ -64,9 +64,14 @@ import { AddProducts } from './components/api/AddProducts';
 import { UseRefDemo1 } from './components/UseRefDemo1';
 import { UseRefDemo2 } from './components/UseRefDemo2';
 import { UseRefDemo3 } from './components/UseRefDemo3';
+import { WaterFlow } from './components/WaterFlow';
+import { House1 } from './components/House1';
+import { House1Room1 } from './components/House1Room1';
+import { ThemeContext } from './components/ThemeContext';
 //import './App.css'
 
 function App() {
+    var theme="dark"
 
   // var name="Purva";
   // var year=2026
@@ -85,6 +90,7 @@ function App() {
   // }
 
   return (
+    
     <div>
       {/* <h1>Hello</h1>
       <h1>Name: {name}</h1>
@@ -116,6 +122,7 @@ pauseOnHover
 theme="dark"
 transition={Bounce}
 />
+        <ThemeContext.Provider value={{theme}}>  
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<MapDemo4/>}></Route>
@@ -171,7 +178,12 @@ transition={Bounce}
         <Route path='/useref1' element={<UseRefDemo1/>}></Route>
         <Route path='/useref2' element={<UseRefDemo2/>}></Route>
         <Route path='/useref3' element={<UseRefDemo3  />}></Route>
+        <Route path='/waterflow' element={<WaterFlow/>}></Route>
+        <Route path='/theme' element={<ThemeContext/>}></Route>
       </Routes>
+
+    </ThemeContext.Provider>
+    
     </div>
   )
 }

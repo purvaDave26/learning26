@@ -12,8 +12,10 @@ export const Navbar = () => {
     navigate("/login");
 
   }
+  const {theme} = useContext(ThemeContext)
   return (
     <div>
+        console.log({theme})
         <nav class="navbar navbar-expand-lg navbar-light bg-lighth">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -264,6 +266,12 @@ export const Navbar = () => {
                <NavLink to="/useref3" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
                 ({color: isActive ? "blue" : "black"})}>use ref 3</NavLink>
             </li>
+           
+             <li>
+               <NavLink to="/waterflow" className={({ isActive }) => (isActive ? "active-link" : "")} style={({ isActive }) =>
+                ({color: isActive ? "blue" : "black"})}>waterflow</NavLink>
+            </li>
+
             
     </ul>
   </div>
