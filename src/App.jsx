@@ -68,10 +68,12 @@ import { WaterFlow } from './components/WaterFlow';
 import { House1 } from './components/House1';
 import { House1Room1 } from './components/House1Room1';
 import { ThemeContext } from './components/ThemeContext';
+import { AuthContext } from './AuthContext';
 //import './App.css'
 
 function App() {
-    var theme="dark"
+    const [theme, settheme] = useState(localStorage.getItem("theme")||"light")
+    const [tokan, settokan] = useState("");
 
   // var name="Purva";
   // var year=2026
@@ -90,8 +92,13 @@ function App() {
   // }
 
   return (
-    
-    <div>
+     <AuthContext.Provider value={{tokan,settokan}}>
+     <ThemeContext.Provider value={{theme,settheme}}>  
+   
+    <div  style={{
+          backgroundColor: theme == "light" ? "white" : "black",
+          color: theme == "light" ? "black" : "white",
+        }}>
       {/* <h1>Hello</h1>
       <h1>Name: {name}</h1>
       <h2>Year: {year}</h2>
@@ -122,8 +129,9 @@ pauseOnHover
 theme="dark"
 transition={Bounce}
 />
-        <ThemeContext.Provider value={{theme}}>  
+       
       <Navbar></Navbar>
+    
       <Routes>
         <Route path='/' element={<MapDemo4/>}></Route>
         <Route path='/netflixhome' element={<NetflixHome/>}></Route>
@@ -182,9 +190,11 @@ transition={Bounce}
         <Route path='/theme' element={<ThemeContext/>}></Route>
       </Routes>
 
-    </ThemeContext.Provider>
+    
     
     </div>
+      </ThemeContext.Provider>
+           </AuthContext.Provider>
   )
 }
 

@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { ThemeContext } from './ThemeContext';
 
 export const Navbar = () => {
   const navigate=useNavigate();
+  const themeHandler=()=>
+  {
+    settheme(theme=="light"?"dark":"light")
+    localStorage.setItem("theme",theme=="light"?"dark":"light")
+  }
   const logoutHandlar=()=>
   {
 
@@ -12,15 +18,17 @@ export const Navbar = () => {
     navigate("/login");
 
   }
-  const {theme} = useContext(ThemeContext)
+  const {theme,settheme} = useContext(ThemeContext)
+   console.log("theme--->",theme)
   return (
     <div>
-        console.log({theme})
-        <nav class="navbar navbar-expand-lg navbar-light bg-lighth">
+       
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <button onClick={()=>{themeHandler()}}>{theme=="light"?"dark":"light"}</button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
